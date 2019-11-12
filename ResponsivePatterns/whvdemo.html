@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+		<link href="app.css" rel="stylesheet" />
+		<style>
+			/*image at the bottom*/
+			.sitelink img {
+				display: none;
+			}
+			/* Top Navigation bar*/
+			.navbar-light {
+				background-color: #00ccff;
+			}
+
+			/*The box top-left side with logo*/
+			.navbar-light .navbar-brand.has-logo {
+				color: #fff;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			/*Text in box top-left side for branding*/
+			.navbar-light .navbar-brand.has-logo:hover, .navbar-light .navbar-brand:hover {
+				color: #00ccff;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			/*The text box top-left side */
+			.navbar-light .navbar-brand {
+				color: #fff;
+				font-family: Salsa;
+				background-color: #00ccff;
+				border: 1px solid #fff;
+				box-shadow: 1px 1px 1px #ddd;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			.navbar-light .navbar-nav .nav-link, .dropdown-toggle::after, span.usertext {
+				color: #fff;
+			}
+
+			.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .open > .nav-link, .dropdown-toggle nav-link, span.usertext:hover, .navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .open > .nav-link:focus, .navbar-light .navbar-nav .active > .nav-link:focus, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .open > .nav-link:hover, .navbar-light .navbar-nav .active > .nav-link:hover, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .nav-link.active:hover {
+				color: #b01b00;
+			}
+
+			h1 {
+				font-family: salsa, cursive;
+				color: #00ccff;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			h2, h3, h4 {
+				color: #A61300;
+				font-family: salsa, cursive;
+			}
+
+			/*Home page Marketing block */
+			#marketingblock01 {
+				margin: 1em auto;
+				padding: 0.5em;
+				background-color: #373A3C;
+			}
+
+			#marketingblock01.card {
+				float: left;
+				width: 23%;
+				height: 25em;
+				padding: 1em;
+				margin: 0.5em;
+				border: 1px solid #000;
+				box-shadow: 2px 2px 2px #000;
+				background-color: #fff
+			}
+
+			div.featureimg img {
+				display: block;
+				width: 100%;
+				margin: 0.3em;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			div .person img {
+				display: block;
+				width: 30%;
+				margin-left: auto;
+				margin-right: auto
+			}
+
+			/* Clear floats after the columns */
+			#marketingblock01:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			@media screen and (max-width: 600px) {
+				.card, #marketingblock01 .card {
+					width: 100%;
+				}
+			}
+
+			#marketingblock01 .card {
+				float: left;
+				width: 23%;
+				height: 25em;
+				padding: 2em;
+				margin: 0.5em;
+				border: 1px solid #000;
+				box-shadow: 2px 2px 2px #000;
+			}
+
+			.featuredcontent {
+				height: 80%;
+			}
+
+			p.featuread {
+				color: #A61300;
+				text-shadow: 1px 1px 1px #ddd;
+				text-align: center;
+				font-family: "Salsa", cursive;
+				font-weight: bold;
+				font-size: 1.25em;
+			}
+
+			.card a {
+				padding: 0.5em;
+				background-color: #0cf;
+				margin-bottom: -5em;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.card a:hover {
+				color: #A61300;
+			}
+
+			div .morelink {
+				position: relative;
+				float: left;
+				margin-bottom: 10%;
+			}
+
+			.jumbotron {
+				border: 1px #000 solid;
+				background-color: #373A3C;
+			}
+
+			.jumbotron a {
+				color: #ccc;
+				text-decoration: underline;
+			}
+
+			.jumbotron a:hover {
+				color: #0cf;
+			}
+			.jumbotron .container {
+				padding: 0px 1em;
+			}
+
+			.jumbotron .container h5 {
+				font-family: "Salsa", cursive;
+				color: #00CFFF;
+				text-shadow: 1px 1px 1px #000;
+				background-color: #373A3C;
+			}
+
+			div#yui_3_17_2_1_1569582778991_29 .popover-region-toggle nav-link:hover, a .fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex:hover {
+				color: #fff;
+				background-color: none;
+			}
+
+			/* Frontpage Carousel styling*/
+			#servicepitch .container {
+				max-width: 100%;
+			}
+			.carousel-control-next-icon {
+				color: #A61300;
+			}
+
+			.carousel-control-prev-icon {
+				margin-left: -75%;
+			}
+
+			.carousel-control-next-icon {
+				margin-right: -75%;
+			}
+
+			#marketingblock01 {
+				padding: 2em 0.1em 3em 2em;
+			}
+
+			#marketingblock01 h3{
+				color: #0cf;
+				font-family: salsa, cursive;
+				text-shadow: 1px 1px 1px black;
+				margin: 0.15em;
+				text-align: center;
+			}
+
+			.carousel-control-prev-icon:hover {
+				color: #A61300;
+			}
+
+			.carousel-indicators .active {
+				background-color: #691E3F;
+			}
+
+			a.nav-item {
+				background-color: #691E3F;
+			}
+
+			/* Responsive Design for the carousel*/
+
+			ul.navbar-nav, ul.d-none, ul.d-dm-flex {
+				width: auto;
+			}
+			/* Extra small devices (phones, 600px and down) */
+			@media only screen and (max-width: 600px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 90%;
+					height: 25em;
+					padding: 1em;
+					margin: 0.5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+
+			}
+
+			/* Small devices (portrait tablets and large phones, 360px and up) */
+			@media only screen and (min-width: 360px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 90%;
+					height: 25em;
+					padding: 1em;
+					margin: 0.5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+
+			}
+
+			/* Small devices (portrait tablets and large phones, 600px and up) */
+			@media only screen and (min-width: 600px) {
+
+				.card {
+					float: left;
+					position: relative;
+					width: 45%;
+					height: 25em;
+					padding: 1em;
+					margin: 0.5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+
+			}
+
+			/* Medium devices (landscape tablets, 768px and up) */
+			@media only screen and (min-width: 768px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 45%;
+					height: 25em;
+					padding: 1em;
+					margin: 0.5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+
+				@media only screen and (min-width: 768px) and (max-width: 992px) {
+					nav.fixed-top ul.navbar-nav a.nav-item.nav-link, li.dropdown.nav-item/*, a.navbar-brand.has-logo*/ {
+						display: none;
+					}
+				}
+
+				@media only screen and (min-width: 992px) {
+					.navbar-nav {
+						width: /* 15em*/auto;
+						margin-right: -1em;
+					}
+				}
+
+			}
+
+			/* Large devices (laptops/desktops, 992px and up) */
+			@media only screen and (min-width: 992px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 23%;
+					height: 25em;
+					padding: 1em;
+					margin: 0.5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff;
+				}
+
+			}
+
+			/* Large devices (laptops/desktops, 1920px and up) */
+			@media only screen and (min-width: 1920px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 20%;
+					height: 30em;
+					padding: 1em;
+					margin: 1em 2em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+			}
+
+			/* Large devices (laptops/desktops, 3840px and up) */
+			@media only screen and (min-width: 3840px) {
+				.card {
+					float: left;
+					position: relative;
+					width: 20%;
+					height: 50em;
+					padding: 1em;
+					margin: 1em 5em;
+					border: 1px solid #000;
+					box-shadow: 2px 2px 2px #000;
+					background-color: #fff
+				}
+			}
+
+			/* Large devices (laptops/desktops, 1024px and up) */
+			@media only screen and (min-width: 1024px) {
+				.navbar-nav {
+					width: auto;
+					margin-right: -1em;
+				}
+			}
+
+			/*Course Section*/
+
+			.sectionname {
+				padding: .45em 1em;
+				background-color: #0cf;
+				box-shadow: 1px 1px 1px #000;
+			}
+
+			h3.sectionname {
+				color: #fff;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			/*Login forn*/
+			.pagelayout-login #region-main .card-block {
+				box-shadow: 2px 2px 2px #000;
+			}
+
+			.form-control {
+				margin: 0.25em auto;
+			}
+
+			#page-login-index {
+				background-image: url("./boost/pix/classroom2.jpg");
+				background-color: #00ccff;
+				height: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.card-body{
+				background-color: #373a3c;
+				color:#00ccff;
+				width:35%;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header class="container-fluid">
+			<h1>HEADER</h1>
+		</header>
+		<div id="servicepitch">
+			<div class="container">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol><!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-interval="5000">
+							<div id="marketingblock01" class="d-block w-100">
+								<h3> Featured Courses</h3>
+								<div class="card">
+									<p class="featuread">
+										Featured Course
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg"><img src="http://localhost/teachlearn/theme/boost/pix/howtoguide.png" title="How to use the platform" alt="How to use the platform" />
+										</div>
+										<p class="featuread">
+											How to use TeachLearn Online Platform
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+								<div class="card ">
+									<p class="featuread ">
+										Featured School
+									</p>
+									<div class="featuredcontent ">
+										<div class="featureimg "><img src="http://localhost/teachlearn/theme/boost/pix/WHVLogo.png" title="Webhostville Services" alt="Webhostville Services" target="_blank" />
+										</div>
+										<p>
+											Provides E-learning platform implementation and web hosting services for Education Institutions, Individual Educators and Businesses.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+
+								<div class="card">
+									<p class="featuread">
+										Featured Teacher
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person"><img src="http://localhost/teachlearn/theme/boost/pix/rafiat.jpg" title="Rafiat" alt="Rafiat" target="_blank" />
+										</div>
+										<p class="featuread">
+											Rafiat
+										</p>
+										<p>
+											Lead Consultant at Webhostville Services, Teacher and Platform Manager at TeachLearn Online.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+
+								<div class="card">
+									<p class="featuread">
+										Featured Learner
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person "><img src="http://localhost/teachlearn/theme/boost/pix/sandra.png" title="Sandra" alt="Sandra" target="_blank" />
+										</div>
+										<p class="featuread">
+											Sandra
+										</p>
+										<p>
+											Experienced Primary and Secondary Teacher.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+							</div>
+							<!-- <img src="la.jpg" alt="Los Angeles" style="width:100%;"> -->
+						</div>
+						<div class="carousel-item">
+							<div id="marketingblock01" class="d-block w-100">
+								<h3> Featured Courses</h3>
+								<div class="card">
+									<p class="featuread">
+										Featured Course
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg"><img src="http://localhost/teachlearn/theme/boost/pix/howtoguide.png" title="How to use the platform" alt="How to use the platform" />
+										</div>
+										<p class="featuread">
+											How to use TeachLearn Online Platform
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more">More </a>
+									</div>
+								</div>
+								<div class="card ">
+									<p class="featuread ">
+										Featured School
+									</p>
+									<div class="featuredcontent ">
+										<div class="featureimg "><img src="http://localhost/teachlearn/theme/boost/pix/WHVLogo.png" title="Webhostville Services" alt="Webhostville Services" target="_blank" />
+										</div>
+										<p>
+											Provides E-learning platform implementation and web hosting services for Education Institutions, Individual Educators and Businesses.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Teacher
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person"><img src="http://localhost/teachlearn/theme/boost/pix/rafiat.jpg" title="Rafiat" alt="Rafiat" target="_blank" />
+										</div>
+										<p class="featuread">
+											Rafiat
+										</p>
+										<p>
+											Lead Consultant at Webhostville Services, Teacher and Platform Manager at TeachLearn Online.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more">More</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Learner
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person "><img src="http://localhost/teachlearn/theme/boost/pix/sandra.png" title="Sandra" alt="Sandra" target="_blank" />
+										</div>
+										<p class="featuread">
+											Sandra
+										</p>
+										<p>
+											Experienced Primary and Secondary Teacher.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+							</div>
+							<!--  <img src="chicago.jpg" alt="Chicago" style="width:100%;"> -->
+						</div>
+						<div class="carousel-item" data-interval="5000">
+							<div id="marketingblock01" class="d-block w-100">
+								<h3> Featured Courses</h3>
+								<div class="card">
+									<p class="featuread">
+										Featured Course
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg"><img src="http://localhost/teachlearn/theme/boost/pix/howtoguide.png" title="How to use the platform" alt="How to use the platform" />
+										</div>
+										<p class="featuread">
+											How to use TeachLearn Online Platform
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more">More </a>
+									</div>
+								</div>
+								<div class="card ">
+									<p class="featuread ">
+										Featured School
+									</p>
+									<div class="featuredcontent ">
+										<div class="featureimg "><img src="http://localhost/teachlearn/theme/boost/pix/WHVLogo.png" title="Webhostville Services" alt="Webhostville Services" target="_blank" />
+										</div>
+										<p>
+											Provides E-learning platform implementation and web hosting services for Education Institutions, Individual Educators and Businesses.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Teacher
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person"><img src="http://localhost/teachlearn/theme/boost/pix/rafiat.jpg" title="Rafiat" alt="Rafiat" target="_blank" />
+										</div>
+										<p class="featuread">
+											Rafiat
+										</p>
+										<p>
+											Lead Consultant at Webhostville Services, Teacher and Platform Manager at TeachLearn Online.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more">More</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Learner
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person "><img src="http://localhost/teachlearn/theme/boost/pix/sandra.png" title="Sandra" alt="Sandra" target="_blank" />
+										</div>
+										<p class="featuread">
+											Sandra
+										</p>
+										<p>
+											Experienced Primary and Secondary Teacher.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+							</div>
+							<!--  <img src="ny.jpg" alt="New york" style="width:100%;"> -->
+						</div>
+						<div class="carousel-item" data-interval="5000">
+							<div id="marketingblock01" class="d-block w-100">
+								<h3> Featured Courses</h3>
+								<div class="card">
+									<p class="featuread">
+										Featured Course
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg"><img src="http://localhost/teachlearn/theme/boost/pix/howtoguide.png" title="How to use the platform" alt="How to use the platform" />
+										</div>
+										<p class="featuread">
+											How to use TeachLearn Online Platform
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">More </a>
+									</div>
+								</div>
+								<div class="card ">
+									<p class="featuread ">
+										Featured School
+									</p>
+									<div class="featuredcontent ">
+										<div class="featureimg "><img src="http://localhost/teachlearn/theme/boost/pix/WHVLogo.png" title="Webhostville Services" alt="Webhostville Services" target="_blank" />
+										</div>
+										<p>
+											Provides E-learning platform implementation and web hosting services for Education Institutions, Individual Educators and Businesses.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Teacher
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person"><img src="http://localhost/teachlearn/theme/boost/pix/rafiat.jpg" title="Rafiat" alt="Rafiat" target="_blank" />
+										</div>
+										<p class="featuread">
+											Rafiat
+										</p>
+										<p>
+											Lead Consultant at Webhostville Services, Teacher and Platform Manager at TeachLearn Online.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">More</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Learner
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person "><img src="http://localhost/teachlearn/theme/boost/pix/sandra.png" title="Sandra" alt="Sandra" target="_blank" />
+										</div>
+										<p class="featuread">
+											Sandra
+										</p>
+										<p>
+											Experienced Primary and Secondary Teacher.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+							</div>
+							<!-- <img src="la.jpg" alt="Los Angeles" style="width:100%;"> -->
+						</div>
+						<div class="carousel-item" data-interval="5000">
+							<div id="marketingblock01" class="d-block w-100">
+								<h3> Featured Courses</h3>
+								<div class="card">
+									<p class="featuread">
+										Featured Course
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg"><img src="http://localhost/teachlearn/theme/boost/pix/howtoguide.png" title="How to use the platform" alt="How to use the platform" />
+										</div>
+										<p class="featuread">
+											How to use TeachLearn Online Platform
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">More </a>
+									</div>
+								</div>
+								<div class="card ">
+									<p class="featuread ">
+										Featured School
+									</p>
+									<div class="featuredcontent ">
+										<div class="featureimg "><img src="http://localhost/teachlearn/theme/boost/pix/WHVLogo.png" title="Webhostville Services" alt="Webhostville Services" target="_blank" />
+										</div>
+										<p>
+											Provides E-learning platform implementation and web hosting services for Education Institutions, Individual Educators and Businesses.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Teacher
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person"><img src="http://localhost/teachlearn/theme/boost/pix/rafiat.jpg" title="Rafiat" alt="Rafiat" target="_blank" />
+										</div>
+										<p class="featuread">
+											Rafiat
+										</p>
+										<p>
+											Lead Consultant at Webhostville Services, Teacher and Platform Manager at TeachLearn Online.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more">More</a>
+									</div>
+								</div>
+								<div class="card">
+									<p class="featuread">
+										Featured Learner
+									</p>
+									<div class="featuredcontent">
+										<div class="featureimg person "><img src="http://localhost/teachlearn/theme/boost/pix/sandra.png" title="Sandra" alt="Sandra" target="_blank" />
+										</div>
+										<p class="featuread">
+											Sandra
+										</p>
+										<p>
+											Experienced Primary and Secondary Teacher.
+										</p>
+									</div>
+									<div class="morelink">
+										<a href="#" alt="find out more" title="find out more" class="btn btn-primary">View course</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Left and right controls -->
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a><a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+				</div>
+				<div class="carousel slide" data-ride="carousel"></div>
+				<div class="carousel slide" data-ride="carousel"></div>
+				<div class="carousel slide" data-ride="carousel">
+					<div class="row-fluid">
+						<div class="left-col span12"></div>
+					</div>
+				</div>
+				<div class="carousel slide" data-ride="carousel"></div>
+			</div>
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<h5>At <a href="https://www.webhostville.com" title="Webhostville Services" alt="Webhostville Services">Webhostville Services</a>, we provide eLearning platform implementation services for Education and Training Institutions, Individual Educator and Businesses.</h5>
+					<br />
+					<h5>At our TeachLearn Online Platform, we provide you with a space to create your online courses accessible to you and your learners only. Available for Individual Educators, Training Institutions and Businesses.</h5>
+					<br />
+					<h5>Your Teaching and learning could be instructor-led, self-paced, blended or entirely online, whatever your choice our platform covers it all.</h5>
+					<br />
+					<h5>Our platform enables the blended learning environment that keeps the classic classroom and face-face mode of Education alongside eLearning, a preferred choice for Education and Training Institutions.</h5>
+					<br />
+					<h5>With our E-learning platform services you can teach and learn online anytime and anywhere without limitations.</h5>
+					<br />
+					<h5>Extend your teaching and learning beyond the classroom and open the world of possibilities.</h5>
+					<br />
+					<h5>Widen participation for an inclusive teaching and learning for all.</h5>
+					<br />
+					<h5>The future of Work and Education is online and digital, start yours today.</h5>
+				</div>
+				<div class="card">
+					<div class="card-header">
+					<h3>Contact</h3>	
+					</div>
+					<div class="card-body">
+						<h5><i class="fas fa-envelope-square"></i></i>info@webhostville.com</h5>
+						<h5><i class="fas fa-phone-square"></i>(+234)0812 943 9969</h5>
+						<h5><i class="fab fa-whatsapp-square"></i>(+234)0812 943 9969</h5>
+						<h5><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/webhostville">Webhostville</a></h5>
+						<h5><i class="fab fa-twitter-square"></i><a href="https://twitter.com/webhostville">@Webhostville</a></h5>
+						<h5><i class="fab fa-instagram"></i><a href="https://www.instagram.com/whvservices/">@whvservices</a></h5>
+						
+					</div>
+					
+					
+				</div>
+				
+			</div>
+		</div>
+
+		<footer class="container-fluid">
+			<h1>FOOTER</h1>
+		</footer>
+	</body>
+</html>
